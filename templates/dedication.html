@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Dedication{% endblock %}
+
+{% block content %}
+<div class="dedication-container">
+  <h1 class="dedication-title">Dedication</h1>
+  <p class="dedication-subtext">From my heart to you</p>
+
+  <div class="dedication-card">
+    <p id="dedication-text"></p><span id="cursor">|</span>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="{{ url_for('letter') }}" class="btn">⬅ Back To Letter</a>
+    <a href="{{ url_for('celebration') }}" class="btn">Next: Celebration ➡</a>
+  </div>
+</div>
+
+<script>
+  // Typing effect with blinking cursor
+  const text = `This project was built for you — a reflection of your strength,
+your journey, and the grace of God in your life.
+Every page carries pieces of who you are,
+and every detail is here because you inspire it.
+This is not just a website; it’s a gift, a memory,
+and a tribute to everything you’ve overcome
+and everything you’re becoming.
+You deserve everything and more my dearest friend...keep on winning and keep on shinning.`;
+
+  const speed = 50; // typing speed in ms
+  let i = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("dedication-text").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  window.onload = typeWriter;
+</script>
+{% endblock %}

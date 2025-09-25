@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Graduation Landing Page{% endblock %}
+
+{% block content %}
+<div class="landing-container">
+    <!-- Anchor (left) -->
+    <img src="{{ url_for('static', filename='images/anchor_w.png') }}" alt="Anchor" class="anchor-bg">
+
+    <!-- Center: Hero -->
+    <div class="hero">
+        <h1 class="gold-text">🎓 Congratulations!</h1>
+        <h2 class="gold-text">Nigerian Navy Medical School Graduate</h2>
+        <p class="subtitle">We salute your discipline, courage, and excellence ⚓</p>
+
+        <!-- Buttons -->
+        <div class="button-group">
+            <a href="{{ url_for('journey') }}" class="nav-btn">Her Journey</a>
+            <a href="{{ url_for('tribute') }}" class="nav-btn">Tributes</a>
+            <a href="{{ url_for('gallery') }}" class="nav-btn">Gallery</a>
+            <a href="{{ url_for('dedication') }}" class="nav-btn">Dedication</a>
+        </div>
+    </div>
+    
+
+    <!-- Flag (right) -->
+    <img src="{{ url_for('static', filename='images/flag_1.png') }}" alt="Nigerian Flag" class="flag">
+</div>
+
+<!-- Footer (kept here to ensure consistent placement) -->
+<footer>
+    <p class="footer-text">⚓ Discipline • Honor • Service • Excellence 🎓</p>
+</footer>
+
+<!-- Confetti (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+    window.onload = () => {
+        try {
+            confetti({ particleCount: 120, spread: 100, origin: { y: 0.6 }});
+        } catch(e) { /* confetti lib may fail offline — ignore */ }
+    };
+</script>
+{% endblock %}

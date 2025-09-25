@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Letters from the Future{% endblock %}
+
+{% block content %}
+<div class="letters-container">
+  <h1 class="letters-title">✉️ A Letter From Your Future Self</h1>
+  
+  <div class="letter-box">
+    <p class="typing-text">
+      Dear Present me - Glory Ejiogu, <br><br>
+      I know the road hasn’t always been easy, but I promise you —
+      the strength you carry now will guide you into brighter days. <br><br>
+      One day, you will look back on today and smile, knowing every tear shaped your resilience
+      and every challenge made you stronger. <br><br>
+      The people who doubted you will stand amazed, and those who truly love you will celebrate
+      how far you’ve come. <br><br>
+      You will discover new joys, build new dreams, and walk paths you once thought impossible. <br><br>
+      Remember: every step you take today is creating the woman you are destined to be —
+      graceful, wise, and unstoppable. <br><br>
+      Keep going, keep believing. Your light will never fade. <br><br>
+      And you better not for once doubt anything that I have written to you, because if you do, then be ready serve job!!! <br> <br>
+      With love, <br>
+      ✨ Your Future Self
+    </p>
+    <span class="cursor">|</span>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="{{ url_for('future') }}" class="btn">⬅ Back To Future </a>
+    <a href="{{ url_for('dedication') }}" class="btn">Next:Dedication ➡</a>
+  </div>
+</div>
+{% endblock %}

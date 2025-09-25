@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Her Journey{% endblock %}
+
+{% block content %}
+<div class="journey-container">
+  <h1 class="journey-title">⚓ Her Journey 🎓</h1>
+  <div class="timeline">
+
+    <!-- Timeline item -->
+    <div class="timeline-item left">
+      <div class="content">
+        <h2>📚 Early Education</h2>
+        <p>She began her academic journey with passion and determination, excelling in her early studies.</p>
+      </div>
+    </div>
+
+    <!-- Timeline item -->
+    <div class="timeline-item right">
+      <div class="content">
+        <h2>🏥 Medical School</h2>
+        <p>Her years in the Navy Medical School were marked by discipline, courage, and long hours of dedication.</p>
+      </div>
+    </div>
+
+    <!-- Timeline item -->
+    <div class="timeline-item left">
+      <div class="content">
+        <h2>⚓ Nigerian Navy Service</h2>
+        <p>Joining the Nigerian Navy, she embraced service, honor, and the spirit of leadership.</p>
+        <p></p>
+      </div>
+    </div>
+
+    <!-- Timeline item -->
+    <div class="timeline-item right">
+      <div class="content">
+        <h2>🎓 Graduation</h2>
+        <p>A proud graduate of the Nigerian Navy College of Health Science - Offa, ready to serve with excellence and courage.</p>
+        <p>Graduated with a CGPA of 3.95, receiving two prestigious awards: Best Graduating Student in the Pharmacy Department and Overall Best Graduating Technician Student.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="next-page-btn">
+  <a href="{{ url_for('tribute') }}">Next: Tribute →</a>
+</div>
+
+{% endblock %}

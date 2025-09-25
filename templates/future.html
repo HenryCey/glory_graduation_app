@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Future{% endblock %}
+
+{% block content %}
+<div class="future-container">
+  <!-- Sunrise Scene -->
+  <div class="sunrise-scene">
+    <div class="sun"></div>
+    <div class="rays"></div>
+  </div>
+
+  <!-- Her Photo -->
+  <div class="future-photo">
+    <img src="{{ url_for('static', filename='images/her_photo.jpg') }}" alt="Her Picture">
+  </div>
+
+  <!-- Message -->
+  <div class="future-message">
+    <h1>🌅 A Bright Future Ahead</h1>
+    <p>
+      Just like the sun rises each day,<br>
+      your journey moves forward — full of light,<br>
+      strength, and endless possibilities. <br>
+      Keep shining and emitting the Glory of God in your life. 
+    </p>
+  </div>
+
+  <!-- Navigation -->
+  <div class="nav-buttons">
+    <a href="{{ url_for('videos') }}" class="btn">⬅ Back To Videos</a>
+    <a href="{{ url_for('letter') }}" class="btn">Next: Letter➡</a>
+  </div>
+</div>
+{% endblock %}

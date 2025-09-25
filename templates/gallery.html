@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Gallery{% endblock %}
+
+{% block content %}
+<div class="gallery-container">
+  <h1 class="gallery-title">📸 Her Moments in Pictures</h1>
+  <p class="gallery-notice">✨ Click on any image to view it in full size ✨</p>
+
+  <div class="gallery-grid">
+    <!-- Row 1 -->
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder1.jpg') }}" alt="Gallery Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder2.jpg') }}" alt="Gallery Image 2">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder3.jpg') }}" alt="Gallery Image 3">
+    </div>
+
+    <!-- Row 2 -->
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder4.jpg') }}" alt="Gallery Image 4">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder5.jpg') }}" alt="Gallery Image 5">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder6.jpg') }}" alt="Gallery Image 6">
+    </div>
+
+    <!-- Row 3 -->
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder7.jpg') }}" alt="Gallery Image 7">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder8.jpg') }}" alt="Gallery Image 8">
+    </div>
+    <div class="gallery-item">
+      <img src="{{ url_for('static', filename='images/gallery/placeholder.jpg') }}" alt="Gallery Image 9">
+    </div>
+  </div>
+
+  <!-- 🔘 Navigation buttons -->
+  <div class="button-group" style="margin-top: 40px; text-align:center;">
+    <a href="{{ url_for('tribute') }}" class="nav-btn">⬅ Back to Tribute</a>
+    <a href="{{ url_for('poem') }}" class="nav-btn">Next → Poem</a>
+  </div>
+</div>
+
+<!-- 🔑 Lightbox overlay -->
+<div id="lightbox">
+  <span class="close">&times;</span>
+  <span class="prev">&#10094;</span>
+  <img class="lightbox-content" src="" alt="Expanded Image">
+  <span class="next">&#10095;</span>
+</div>
+
+<!-- include the gallery JS (lightbox + arrows) -->
+<script src="{{ url_for('static', filename='js/gallery.js') }}"></script>
+{% endblock %}

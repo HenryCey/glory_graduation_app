@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navy Graduation Tribute</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/tribute">Tribute</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/poem">Poem</a></li>
+      <li><a href="/videos">Videos</a></li>
+      <li><a href="/future">Future</a></li>
+      <li><a href="/dedication">Dedication</a></li>
+      <li><a href="/letter">Letter</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>⚓ Signing-Out / Graduation Tribute to Osma Ejiogu Ihuoma Glory ⚓</p>
+  </footer>
+
+  <script>
+  const items = document.querySelectorAll('.timeline-item');
+
+  function revealOnScroll() {
+    const trigger = window.innerHeight * 0.85;
+    items.forEach(item => {
+      const top = item.getBoundingClientRect().top;
+      if (top < trigger) {
+        item.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>

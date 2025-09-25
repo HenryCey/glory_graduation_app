@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="tribute-container">
+  <h1 class="tribute-title">🎓 Celebrating Her Graduation</h1>
+
+  <!-- Scrapbook Messages -->
+  <div class="scrapbook-grid">
+    <div class="scrapbook-card">
+      <p>"We are so proud of how far you’ve come. Keep shining bright!"</p>
+      <span>- Family</span>
+    </div>
+    <div class="scrapbook-card">
+      <p>"Your journey inspires us. Congratulations on this milestone!"</p>
+      <span>- Your Best Friend</span>
+    </div>
+    <div class="scrapbook-card">
+      <p>"This is only the beginning, greater things await you!"</p>
+      <span>- Henry Ceylon</span>
+    </div>
+    <div class="scrapbook-card">
+      <p>"We can’t wait to see the amazing things you will do next."</p>
+      <span>- Ceylon Henry</span>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Emotional / Inspirational Section -->
+  <h2 class="tribute-subtitle">🌟 Messages of Inspiration & Strength</h2>
+  <div class="tribute-grid">
+    <div class="tribute-card">
+      <h3>Inspiration</h3>
+      <p>You’ve proven that determination breaks every barrier. Your story inspires everyone around you.</p>
+      <hr>
+      <p><i>You might not want to agree with me on this but that is your business 😂</i></p>
+    </div>
+    <div class="tribute-card">
+      <h3>Strength</h3>
+      <p>Through challenges and victories, you showed true strength. I admire your courage.</p>
+       <hr>
+      <p><i>You might not want to agree with me on this but that is your business 😂</i></p>
+    </div>
+    <div class="tribute-card">
+      <h3>Love</h3>
+      <p>Your journey is wrapped in love from God, family and friends, and it will guide you into the future.</p>
+       <hr>
+      <p><i>You might not want to agree with me on this but that is your business 😂</i></p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="tribute-nav">
+    <a href="{{ url_for('journey') }}" class="btn">⬅ Back to Journey</a>
+    <a href="{{ url_for('gallery') }}" class="btn">Next: Gallery ➡</a>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Video{% endblock %}
+
+{% block content %}
+<section class="video-page">
+  <div class="video-inner">
+
+    <header class="video-header">
+      <h1 class="video-title">🎥 A Special Video</h1>
+      <p class="video-desc">✨ Enjoy this moment captured just for you ✨</p>
+    </header>
+
+    <!-- Video Card -->
+    <article class="video-card">
+      <video controls class="video-player">
+        <source src="{{ url_for('static', filename='videos/sample.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="video-caption">💜 Press play to watch</p>
+    </article>
+
+    <!-- Navigation buttons -->
+    <nav class="timeline-nav" aria-label="Video page navigation">
+      <a href="{{ url_for('poem') }}" class="btn btn-outline">⬅ Back to Poem</a>
+      <a href="{{ url_for('future') }}" class="btn btn-primary">Next:Future ➡</a>
+    </nav>
+
+  </div>
+</section>
+{% endblock %}

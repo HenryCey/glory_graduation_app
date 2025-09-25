@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Celebration{% endblock %}
+
+{% block content %}
+<div class="celebration-container">
+  <h1 class="celebration-title">🎓 Congratulations [Glory Ihuoma]!</h1>
+  <p class="celebration-subtitle">On Your Graduation 🎉</p>
+
+  <div class="photo-frame">
+    <img src="{{ url_for('static', filename='images/her_image2.jpg') }}" alt="Her Picture">
+  </div>
+
+  <p class="celebration-note">
+    The journey doesn’t end here — it’s only the beginning. Shine on ✨
+  </p>
+
+  <!-- Fireworks canvas -->
+  <canvas id="fireworks"></canvas>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti"></canvas>
+  <div class="nav-buttons">
+    <a href="{{ url_for('index') }}" class="btn"> Home</a>
+    <a href="{{ url_for('index') }}" class="btn">Next: Home ➡</a>
+  </div>
+</div>
+<script src="{{ url_for('static', filename='js/celebration.js') }}"></script>
+{% endblock %}

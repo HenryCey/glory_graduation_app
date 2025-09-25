@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Poem{% endblock %}
+
+{% block content %}
+<section class="poem-page">
+  <div class="poem-inner">
+
+    <header class="poem-header">
+      <h1 class="poem-title">✍ A Poem for You</h1>
+      <p class="poem-description">
+        ✨ Every word here was written with you in mind — click the poem below to read the whole piece ✨
+      </p>
+    </header>
+
+    <article class="poem-card" aria-labelledby="poem-title">
+      <!-- decorative open quote -->
+      <div class="quote-deco" aria-hidden="true">“</div>
+
+      <!-- Preview (keeps first few lines visible) -->
+      <div class="poem-preview">
+        <p class="poem-line">Behind quiet eyes, a story hides,</p>
+        <p class="poem-line">Of battles fought and tears that dried.</p>
+        <p class="poem-line">A heart once broken, now made strong,</p>
+        <p class="poem-line">By grace that carried you all along...</p>
+      </div>
+
+      <!-- Hidden rest of poem -->
+      <div class="poem-full visually-hidden" id="poem-full" aria-hidden="true">
+        <p class="poem-line">You wear a smile, though the world may not see,</p>
+        <p class="poem-line">The depth of your kindness, your quiet beauty.</p>
+        <p class="poem-line">Gentle and funny, yet stronger than most,</p>
+        <p class="poem-line">Your light shines brightest when life tries to boast.</p>
+
+        <p class="poem-line">Though shy at first, your soul is wide,</p>
+        <p class="poem-line">A place where laughter and care reside.</p>
+        <p class="poem-line">Not all can know the treasure you are,</p>
+        <p class="poem-line">But God does — and He’s brought you far.</p>
+
+        <p class="poem-line">So here’s to the journey, the healing, the cheer,</p>
+        <p class="poem-line">To brighter tomorrows, to love without fear.</p>
+        <p class="poem-line">You’re more than the pain, more than the past,</p>
+        <p class="poem-line">You’re a friend worth keeping, a joy that will last.</p>
+        <p class="poem-line">Continue winning and shine on my dear friend {Glory Ejiogu}</p>
+      </div>
+
+      <!-- Toggle button -->
+      <div class="poem-actions">
+        <button id="toggle-poem" class="btn btn-primary" aria-expanded="false" aria-controls="poem-full">
+          Read Full Poem
+        </button>
+      </div>
+    </article>
+
+    <!-- Navigation: Back and Next -->
+    <nav class="timeline-nav" aria-label="Poem page navigation">
+      <a href="{{ url_for('gallery') }}" class="btn btn-outline">⬅ Back to Gallery</a>
+      <a href="{{ url_for('videos') }}" class="btn btn-primary">Next: Videos Tribute➡</a>
+    </nav>
+
+  </div>
+</section>
+
+<!-- Include page script -->
+<script src="{{ url_for('static', filename='js/poem.js') }}"></script>
+{% endblock %}
